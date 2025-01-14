@@ -19,7 +19,7 @@ export default function MaterialDetails() {
 
   return (
     <div className="container">
-      <h2>{material.materialName}</h2>
+      <h2 className="mt-4">{material.materialName}</h2>
       <Table>
         <tbody>
           <tr>
@@ -40,7 +40,7 @@ export default function MaterialDetails() {
         </tbody>
       </Table>
       <h5>Checkouts</h5>
-      {material.checkouts?.length ? (
+      {material.checkout?.length ? (
         <Table>
           <thead>
             <tr>
@@ -51,7 +51,7 @@ export default function MaterialDetails() {
             </tr>
           </thead>
           <tbody>
-            {material.checkouts.map((co) => (
+            {material.checkout.map((co) => (
               <tr key={`checkout-${co.id}`}>
                 <td>
                   {co.patron.firstName} {co.patron.lastName}
